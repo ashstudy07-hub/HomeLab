@@ -38,7 +38,7 @@ Wazuh has several features that help monitor endpoint devices, check compliance,
 
 This document outlines the initial setup and configuration process for a Wazuh deployment. [READ HERE](/Wazuh-setup-config.md)
 
-One of the features that Wazuh provide is File Integrity Monitor (FIM), which allows us to monitor activity on the specified folder on the end host. This feature can be used with [VirusTotal integration](/Wazuh-VirusTotal-Integration.md) for monitoring and inspecting monitored files for malicious content.
+One of the features that Wazuh provides is File Integrity Monitor (FIM), which allows us to monitor activity on the specified folder on the end host. This feature can be used with [VirusTotal integration](/Wazuh-VirusTotal-Integration.md) for monitoring and inspecting monitored files for malicious content.
 
 Suricata is used as an open-source network intrusion detection system (IDS) and intrusion prevention system (IPS) to monitor network traffic for malicious activity. As we have a pfsense firewall already setup for our Lab, we can run [SURICATA](/Suricata-on-pfsense.md) on pfSense as a service. 
 Instead of sending the logs from Suricata to SPLUNK and WAZUH directly (which can sometimes result in only one SIEM receiving the logs), we will be deploying a separate log collector VM that receives the logs from Suricata and forwards them to the two SIEMs. 
