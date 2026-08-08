@@ -379,8 +379,9 @@ Check your **Splunk dashboard**. You should see the fresh syslog entries indexin
 
 QUERY:
 ```
-source="pfsense" index="main" sourcetype="syslog"
+index="*" sourcetype="syslog" source="pfsense" suricata
 ```
+### You can stop the suricata to Splunk log ingestion here. This is the OPTIONAL and slightly more advanced step to [Tidy the log ingestion](/Splunk-log-ingestion-cleanup.md)
 
 ### Install the Wazuh Agent on the Log Collector VM to seamlessly bridge the gap into the XDR dashboard
 The collector VM is successfully intercepting the pfSense logs, stamping its own telemetry alongside it, and pushing it straight into Splunk.
